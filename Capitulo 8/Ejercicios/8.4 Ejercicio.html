@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- Ejercicio 8.8 -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Interés compuesto múltiple</title>
+      <style>
+         table { width: 300px; border-collapse: collapse; background-color: lightblue; margin-bottom: 20px; }
+         table, td, th { border: 1px solid black; padding: 4px; }
+         th { text-align: left; color: white; background-color: darkblue; }
+      </style>
+      <script>
+         var principal = 1000.00;
+
+         for ( var tasa = 0.05; tasa <= 0.10; tasa += 0.01 )
+         {
+            document.writeln( "<table>" );
+            document.writeln( "<caption>Tasa de interés: " + (tasa * 100).toFixed(0) + "%</caption>" );
+            document.writeln( "<thead><tr><th>Año</th><th>Monto en depósito</th></tr></thead><tbody>" );
+
+            for ( var anio = 1; anio <= 10; ++anio )
+            {
+               var monto = principal * Math.pow( 1.0 + tasa, anio );
+               document.writeln( "<tr><td>" + anio + "</td><td>" + monto.toFixed(2) + "</td></tr>" );
+            }
+
+            document.writeln( "</tbody></table>" );
+         }
+      </script>
+   </head><body></body>
+</html>

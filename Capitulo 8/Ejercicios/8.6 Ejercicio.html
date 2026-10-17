@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Ejercicio 8.11 -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Ventas minoristas</title>
+      <script>
+         var totalVentas = 0;
+         var producto = parseInt( window.prompt( "Escriba el número del producto (1-5) o 0 para salir:" ) );
+
+         while ( producto !== 0 )
+         {
+            var cantidad = parseInt( window.prompt( "Escriba la cantidad vendida:" ) );
+            var precio = 0;
+
+            switch ( producto )
+            {
+               case 1: precio = 2.98; break;
+               case 2: precio = 4.50; break;
+               case 3: precio = 9.98; break;
+               case 4: precio = 4.49; break;
+               case 5: precio = 6.87; break;
+               default: window.alert( "Número de producto inválido" );
+            }
+
+            totalVentas += precio * cantidad;
+            producto = parseInt( window.prompt( "Escriba el número del producto (1-5) o 0 para salir:" ) );
+         }
+
+         document.writeln( "<h1>El valor total de venta de todos los productos fue: $" + totalVentas.toFixed(2) + "</h1>" );
+      </script>
+   </head><body></body>
+</html>

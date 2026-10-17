@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- Ejercicio 8.6 -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Menor de varios enteros</title>
+      <script>
+         var totalValores = parseInt( window.prompt( "Escriba el número de valores a introducir:" ) );
+         var menor = 0;
+
+         if ( totalValores > 0 )
+         {
+            var primero = parseInt( window.prompt( "Escriba el número 1:" ) );
+            menor = primero;
+
+            for ( var i = 2; i <= totalValores; i++ )
+            {
+               var num = parseInt( window.prompt( "Escriba el número " + i + ":" ) );
+               if ( num < menor )
+                  menor = num;
+            }
+
+            document.writeln( "<h1>El número menor es: " + menor + "</h1>" );
+         }
+      </script>
+   </head><body></body>
+</html>
